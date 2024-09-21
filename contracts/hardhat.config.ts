@@ -26,7 +26,11 @@ module.exports = {
   starknettest: {
     url: `https://starknet-mainnet.g.alchemy.com/v2/demo`,
     accounts: [PRIVATE_KEY],
-  }
+  },
+  lineatestnet: {
+    url: `https://rpc.sepolia.linea.build	`,
+    accounts: [PRIVATE_KEY],
+  },
 },
   etherscan: {
     apiKey: {
