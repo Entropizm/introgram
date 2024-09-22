@@ -1,13 +1,9 @@
-# Telegram Mini App + Dynamic connect
+# Introgram 🥂
 
-Steps to have the Telegram Mini App (TMA) + Bot running
+https://ethglobal.com/showcase/introgram-x72by
 
-1. Create a Bot on Telegram using Botfather, [link to tutorial](https://core.telegram.org/bots/tutorial#getting-ready)
-2. Clone this repo, run `cp .env.sample .env` and use your own Dynamic environment ID by replacing `NEXT_PUBLIC_DYNAMIC_ENV_ID` in the `.env` file
-3. Deploy your website online. [link to tutorial](https://vercel.com/docs/deployments/git#deploying-a-git-repository)
-4. Using Botfather, add the website url that should be opened for your TMA. [link to tutorial](https://docs.ton.org/develop/dapps/telegram-apps/step-by-step-guide#3-set-up-bot-mini-app)
-5. Use Bot `TOKEN` from Telegram and your website url as LOGIN_URL in the `.env` file.
-6. Run telegram bot `ts-node scripts/bot.ts`. If you do not have `ts-node` you can install it by running `npm -g i ts-node`
-7. Go to your Telegram Bot and type `/start`
+You don't have to forget about people you have networked with!
 
-[Build Around the Booming Telegram Ecosystem](https://www.dynamic.xyz/ecosystems/telegram)
+Oasis: https://explorer.oasis.io/testnet/sapphire/address/0xc039C13470be809beD1C2CD42339Ccb22e0970f2
+Linea: https://sepolia.lineascan.build/address/0x51cfd395F03583D9B1a376Ad36Af71E8184D4b74
+
