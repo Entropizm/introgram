@@ -25,3 +25,87 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.logo {
+  height: 6.5rem;
+}
+
+html,
+body,
+#__next,
+.container {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column; /* Stack topbar and main vertically */
+  height: 100vh; /* Make the container fill the viewport height */
+}
+
+/* Topbar styling */
+.topbar {
+  width: 100%;
+  background-color: #fff;
+  /* Add any desired styles */
+}
+
+/* Main content area */
+.main {
+  display: flex;
+  flex: 1; /* Take up remaining space */
+  overflow: hidden; /* Prevent content overflow */
+  position: relative;
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 300px; /* Adjust according to preference */
+  overflow-y: auto; /* Enables scrolling if content overflows */
+  border-right: 1px solid #ddd;
+  background-color: #f9f9f9;
+  height: calc(100vh - 64px); /* Adjust height to fill remaining space */
+}
+
+/* Content area styling */
+.content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  height: calc(100vh - 64px); /* Adjust height to fill remaining space */
+}
+
+@media (max-width: 768px) {
+  .main {
+    flex-direction: row; /* Keep as row to allow proper layout */
+    height: calc(100vh - 64px); /* Adjust for AppBar height */
+  }
+  .sidebar {
+    width: 100%;
+    height: calc(100vh - 64px); /* Adjust for AppBar height */
+    position: absolute;
+    z-index: 1000;
+    background-color: #f9f9f9;
+    overflow-y: auto; /* Ensure this is included */
+  }
+  .content {
+    width: 100%;
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    margin-left: 0;
+    height: calc(100vh - 64px); /* Adjust for AppBar height */
+  }
+}
+
+/* Adjust content when sidebar is hidden */
+.content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+#dynamic-widget {
+  align-self: self-start;
+}

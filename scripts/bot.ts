@@ -1,7 +1,7 @@
 const { Telegraf } = require("telegraf");
 const jwt = require("jsonwebtoken");
 const nodeCrypto = require("crypto");
-require('dotenv').config();
+require("dotenv").config();
 
 // Environment variables
 const TOKEN = process.env.TELEGRAM_BOT_TOKEN;
@@ -9,7 +9,7 @@ const LOGIN_URL = process.env.LOGIN_URL;
 
 if (!TOKEN || !LOGIN_URL) {
   console.error(
-    "Please add your Telegram bot token and app URL to the .env file"
+    "Please add your Telegram bot token and app URL to the .env file",
   );
   process.exit(1);
 }
@@ -41,7 +41,7 @@ bot.start((ctx: any) => {
       hash,
     },
     TOKEN, // Use the bot token to sign the JWT
-    { algorithm: "HS256" }
+    { algorithm: "HS256" },
   );
   console.log("[DEBUG] JWT generated for user", userData);
 
@@ -70,7 +70,7 @@ bot.start((ctx: any) => {
 
 // Launch the bot
 bot.launch();
-console.log('[DEBUG] Bot script connected...');
+console.log("[DEBUG] Bot script connected...");
 
 /**
  * Function to generate HMAC hash for Telegram authentication
@@ -94,7 +94,7 @@ const generateTelegramHash = (data: any) => {
       if (value) acc[key] = value;
       return acc;
     },
-    {} as { [key: string]: any }
+    {} as { [key: string]: any },
   );
 
   // Sort the entries and create the data check string
